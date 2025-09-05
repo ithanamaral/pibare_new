@@ -52,7 +52,7 @@ export default function ContactSection() {
               <div className="info-icon">📍</div>
               <div className="info-content">
                 <h3>Localização</h3>
-                <p>Rua das Flores, 123 - Retiro<br />Contagem, MG - CEP: 32000-000</p>
+                <p>Rua Retiro Campestre, 419 - Retiro<br />Contagem, MG - CEP: 32050-400</p>
                 <CTAButton href="https://maps.google.com" variant="secondary" size="small">
                   Ver no Mapa
                 </CTAButton>
@@ -63,8 +63,8 @@ export default function ContactSection() {
               <div className="info-icon">📞</div>
               <div className="info-content">
                 <h3>Telefone</h3>
-                <p>(31) 3333-4444</p>
-                <p>WhatsApp: (31) 99999-8888</p>
+                <p>(31) 98359-7825</p>
+                <p>WhatsApp: (31) 98359-7825</p>
               </div>
             </div>
 
@@ -72,8 +72,7 @@ export default function ContactSection() {
               <div className="info-icon">✉️</div>
               <div className="info-content">
                 <h3>E-mail</h3>
-                <p>contato@igrejaretiro.com.br</p>
-                <p>pastor@igrejaretiro.com.br</p>
+                <p>pastoral.pibare@gmail.com</p>
               </div>
             </div>
 
@@ -82,15 +81,11 @@ export default function ContactSection() {
               <div className="schedule-list">
                 <div className="schedule-item">
                   <span className="day">Domingo</span>
-                  <span className="time">9h e 19h</span>
+                  <span className="time">9h (EBD) e 19h (Culto)</span>
                 </div>
                 <div className="schedule-item">
                   <span className="day">Quarta</span>
                   <span className="time">19h30 (Estudo Bíblico)</span>
-                </div>
-                <div className="schedule-item">
-                  <span className="day">Sexta</span>
-                  <span className="time">19h30 (Culto de Oração)</span>
                 </div>
               </div>
             </div>
@@ -184,7 +179,7 @@ export default function ContactSection() {
           <div className="map-placeholder">
             <div className="map-icon">🗺️</div>
             <h4>Localização da Igreja</h4>
-            <p>Rua das Flores, 123 - Retiro, Contagem/MG</p>
+            <p>Rua Retiro Campestre, 419 - Retiro, Contagem/MG</p>
             <CTAButton href="https://maps.google.com" variant="primary">
               Abrir no Google Maps
             </CTAButton>

@@ -39,6 +39,7 @@ export default function CTAButton({
       href={href} 
       className={classes}
       onClick={onClick}
+      target="_blank"
     >
       {children}
     </Link>
