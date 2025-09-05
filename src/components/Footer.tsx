@@ -17,19 +17,18 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Contato</h4>
             <div className="contact-info">
-              <p>📍 Rua das Flores, 123 - Retiro</p>
-              <p>📍 Contagem, MG - CEP: 32000-000</p>
-              <p>📞 (31) 3333-4444</p>
-              <p>✉️ contato@igrejaretiro.com.br</p>
+              <p>📍 Rua Retiro Campestre, 419 - Retiro</p>
+              <p>📍 Contagem, MG - CEP: 32050-400</p>
+              <p>📞 (31) 98359-7825</p>
+              <p>✉️ pastoral.pibare@gmail.com</p>
             </div>
           </div>
 
           <div className="footer-section">
             <h4>Horários dos Cultos</h4>
             <div className="service-times">
-              <p><strong>Domingo:</strong> 9h e 19h</p>
+              <p><strong>Domingo:</strong> 9h (EBD) e 19h (Culto)</p>
               <p><strong>Quarta:</strong> 19h30 (Estudo Bíblico)</p>
-              <p><strong>Sexta:</strong> 19h30 (Culto de Oração)</p>
             </div>
           </div>
 
@@ -45,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Primeira Igreja Batista no Retiro. Todos os direitos reservados.</p>
+          <p>&copy; 2025 Primeira Igreja Batista no Retiro. Todos os direitos reservados.</p>
           <div className="footer-links">
             <Link href="/privacidade">Política de Privacidade</Link>
             <Link href="/termos">Termos de Uso</Link>
