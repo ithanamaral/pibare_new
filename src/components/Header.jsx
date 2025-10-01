@@ -90,11 +90,6 @@ const Header = () => {
               >
                 Contato
               </a>
-              <div className="px-3 py-2">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-full transition-all duration-300">
-                  Doe Agora
-                </Button>
-              </div>
             </div>
           </div>
         )}
@@ -104,4 +99,6 @@ const Header = () => {
 }
 
 export default Header
+
+
 
