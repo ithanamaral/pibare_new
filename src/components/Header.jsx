@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu, X, Heart } from 'lucide-react'
 import './Header.css'
 import logo2 from '../assets/logo2.png' 
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,9 +15,9 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="header-content">
-          <a href="index.html">
+          <Link to="/">
             <img src={logo2} alt="Logo da Primeira Igreja Batista no Retiro" className="logo-img" />
-          </a>
+          </Link>
             <span className="logo-mobile-pibare">PIBARE</span>
           <div className="header-logo">
             <Heart className="logo-icon" />
@@ -25,21 +26,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="header-nav-desktop">
-            <a href="#inicio" className="nav-link">
-              Início
-            </a>
-            <a href="#sobre" className="nav-link">
-              Sobre Nós
-            </a>
-            <a href="#cultos" className="nav-link">
-              Cultos
-            </a>
-            <a href="#ministerios" className="nav-link">
-              Ministérios
-            </a>
-            <a href="#contato" className="nav-link">
-              Contato
-            </a>
+            <Link to="/" className='nav-link'>Início</Link>
+            <Link to="/devotionals" className='nav-link'>Devocionais</Link>
+            <Link to="/fotos" className='nav-link'>Nossas Fotos</Link>
+            <Link to="/videos" className='nav-link'>Vídeos</Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -52,25 +42,12 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="header-nav-mobile">
-            <div className="mobile-nav-content">
-              <a href="#inicio" className="mobile-nav-link" onClick={toggleMenu}>
-                Início
-              </a>
-              <a href="#sobre" className="mobile-nav-link" onClick={toggleMenu}>
-                Sobre Nós
-              </a>
-              <a href="#cultos" className="mobile-nav-link" onClick={toggleMenu}>
-                Cultos
-              </a>
-              <a href="#ministerios" className="mobile-nav-link" onClick={toggleMenu}>
-                Ministérios
-              </a>
-              <a href="#contato" className="mobile-nav-link" onClick={toggleMenu}>
-                Contato
-              </a>
-            </div>
-          </div>
+          <nav className="header-nav-mobile">
+            <Link to="/" className='mobile-nav-link' onClick={toggleMenu}>Início</Link>
+            <Link to="/devotionals" className='mobile-nav-link' onClick={toggleMenu}>Devocionais</Link>
+            <Link to="/fotos" className='mobile-nav-link' onClick={toggleMenu}>Nossas Fotos</Link>
+            <Link to="/videos" className='mobile-nav-link' onClick={toggleMenu}>Vídeos</Link>
+          </nav>
         )}
       </div>
     </header>

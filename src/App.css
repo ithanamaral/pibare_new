@@ -5,6 +5,30 @@
   box-sizing: border-box;
 }
 
+/* Container que envolve as rotas */
+.main-content {
+  /* Altere para a altura aproximada do seu Header (ex: 80px ou 100px) */
+  padding-top: 90px; 
+  
+  /* Garante que o conteúdo ocupe a tela toda para o Footer não subir */
+  min-height: calc(100vh - 90px); 
+}
+
+/* Opcional: Estilo específico para a página Bosta */
+.bosta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content-container {
+  /* Altere os 80px para a altura real do seu Header */
+  padding-top: 80px; 
+  min-height: calc(100vh - 80px); /* Garante que o rodapé não suba demais */
+}
+
 :root {
   --color-primary: #2563eb;
   --color-primary-dark: #1d4ed8;

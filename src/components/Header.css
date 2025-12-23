@@ -136,6 +136,8 @@
   color: var(--color-gray-700);
   text-decoration: none;
   transition: color 0.3s ease;
+  text-align: right;
+  padding-right: 2.7rem;
 }
 
 .mobile-nav-link:hover {
