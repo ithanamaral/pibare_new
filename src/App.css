@@ -4,10 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  /* Ajuste esse valor de acordo com a altura real do seu header */
-  padding-top: 100px; 
-}
+
 
 /* Container que envolve as rotas */
 .main-content {
