@@ -10,6 +10,8 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Fotos from './components/Fotos'
 import Carousel from './components/carousel'
+import Devotionals from './components/devotionals'
+import Videos from './components/videos'
 
 // Importa Rota
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
@@ -37,8 +39,8 @@ function App() {
 
             <Route path="/about" element={<About />} />
             <Route path="/fotos" element={<Fotos />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/ministries" element={<Ministries />} />
+            <Route path="/devotionals" element={<Devotionals />} />
+            <Route path="/videos" element={<Videos />} />
           </Routes>
         </div>
 

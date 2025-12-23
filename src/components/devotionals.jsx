@@ -1,9 +1,11 @@
 import React from 'react'
 
-function devotionals() {
+function Devotionals() {
   return (
-    <div>devotionals</div>
+    <>
+      <h1>Devotionals</h1>
+    </>
   )
 }
 
-export default devotionals
+export default Devotionals

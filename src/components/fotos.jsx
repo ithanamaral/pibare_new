@@ -1,13 +1,15 @@
 import React from 'react'
 import Carousel from '../components/carousel'
-
-function fotos() {
+import '../components/fotos.css'
+function Fotos() {
   return (
     <>
-    <h1>SEGUE ABAIXO AS NOSSAS FOTOS</h1>
-    <Carousel />
+      <h3 className="titulo-fotos">
+        SEGUE ABAIXO AS NOSSAS FOTOS
+      </h3>
+      <Carousel />
     </>
   )
 }
 
-export default fotos
+export default Fotos
