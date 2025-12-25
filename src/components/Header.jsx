@@ -21,7 +21,7 @@ const Header = () => {
             <span className="logo-mobile-pibare">PIBARE</span>
           <div className="header-logo">
             <Heart className="logo-icon" />
-            <span className="logo-text">Primeira Igreja Batista do Retiro</span>
+            <h1 className="logo-text">Primeira Igreja Batista no Retiro</h1>
           </div>
 
           {/* Desktop Navigation */}
