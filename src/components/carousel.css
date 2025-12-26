@@ -2,7 +2,7 @@
   width: 100%;
   /* Reduzi para 600px para não ocupar a tela toda no seu Ryzen 5, 
      mas pode manter 800px se preferir */
-  height: 600px; 
+  height: 700px; 
   position: relative;
   overflow: hidden; /* Importante para não vazar imagem */
 }

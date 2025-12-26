@@ -1,18 +1,15 @@
 import { ArrowRight, Play } from 'lucide-react'
 import churchExterior from '../assets/Foto1.jpeg'
 import './Hero.css'
+import Carousel from './carousel'
 
 const Hero = () => {
   return (
     <section id="inicio" className="hero">
       {/* Background Image */}
-      <div 
-        className="hero-background"
-        style={{
-          backgroundImage: `url(${churchExterior})`,
-        }}
-      >
-        <div className="hero-overlay"></div>
+       
+      <div className="hero-background">
+        <Carousel />
       </div>
 
       {/* Content */}
