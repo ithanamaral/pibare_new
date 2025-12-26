@@ -71,9 +71,6 @@ const Ministries = () => {
                 <span className="ministry-participants">
                   {ministry.participants}
                 </span>
-                <button className="ministry-link">
-                  Saiba mais →
-                </button>
               </div>
             </div>
           ))}
