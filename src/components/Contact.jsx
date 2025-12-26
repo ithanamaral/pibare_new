@@ -13,7 +13,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      details: ["(31) 99321-5151", "(31) 99298-2421", "WhatsApp disponível"],
+      details: ["(31) 98359-7825", "(31) 99298-2421", "WhatsApp disponível"],
       color: "contact-green"
     },
     {
