@@ -3,6 +3,17 @@
   background-color: var(--color-gray-50);
 }
 
+.donation-methods{
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza verticalmente se houver altura */
+  text-align: center;      /* Garante que os textos (h3, p) fiquem centralizados */
+  width: 100%;             /* Garante que o container use o espaço todo */
+  max-width: 800px;        /* Opcional: evita que as caixas fiquem largas demais em telas gigantes */
+  margin: 0 auto;
+}
+
 .donation-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -46,10 +57,12 @@
 }
 
 .donation-grid {
-  display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do flex */
+  width: 100%;
 }
 
 .methods-title {

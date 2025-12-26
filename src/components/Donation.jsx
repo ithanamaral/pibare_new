@@ -9,35 +9,6 @@ const Donation = () => {
       description: "Transferência instantânea via PIX",
       color: "donation-green"
     },
-    {
-      icon: Building,
-      title: "Transferência Bancária",
-      description: "Depósito direto em nossa conta bancária",
-      color: "donation-purple"
-    }
-  ]
-
-  const impactAreas = [
-    {
-      title: "Ministérios",
-      description: "Apoio aos diversos ministérios da igreja",
-      percentage: "40%"
-    },
-    {
-      title: "Ação Social",
-      description: "Ajuda a famílias carentes e projetos sociais",
-      percentage: "30%"
-    },
-    {
-      title: "Manutenção",
-      description: "Conservação e melhorias do templo",
-      percentage: "20%"
-    },
-    {
-      title: "Missões",
-      description: "Apoio a missionários e evangelização",
-      percentage: "10%"
-    }
   ]
 
   return (
@@ -88,48 +59,6 @@ const Donation = () => {
               <button className="btn btn-primary btn-full btn-large">
                 Doar Agora
               </button>
-              <button className="btn btn-outline-gray btn-full btn-large">
-                Saiba Mais sobre Dízimos
-              </button>
-            </div>
-          </div>
-
-          {/* Impact Areas */}
-          <div className="impact-areas">
-            <h3 className="impact-title">
-              Como Usamos os Recursos
-            </h3>
-            
-            <div className="impact-card">
-              <div className="impact-list">
-                {impactAreas.map((area, index) => (
-                  <div key={index} className="impact-item">
-                    <div className="impact-item-header">
-                      <h4 className="impact-item-title">{area.title}</h4>
-                      <span className="impact-percentage">{area.percentage}</span>
-                    </div>
-                    <p className="impact-item-description">{area.description}</p>
-                    
-                    {/* Progress Bar */}
-                    <div className="progress-bar">
-                      <div 
-                        className="progress-fill"
-                        style={{ width: area.percentage }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Total Impact */}
-              <div className="impact-total">
-                <div className="impact-total-content">
-                  <div className="impact-total-number">100%</div>
-                  <p className="impact-total-text">
-                    Transparência total no uso dos recursos
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
