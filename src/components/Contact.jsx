@@ -1,8 +1,12 @@
-import { MapPin, Phone, Mail, Clock, Send, Facebook, Instagram, Youtube } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 import './Contact.css'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const formRef = useRef(null);
+  const [isSending, setIsSending] = useState(false); // Estado para o botão de loading
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -30,8 +34,7 @@ const Contact = () => {
     }
   ]
 
-  const formRef = useRef(null)
-
+  // Efeito de "blink" quando o formulário entra na tela
   useEffect(() => {
     const formEl = formRef.current
     if (!formEl) return
@@ -50,14 +53,34 @@ const Contact = () => {
     return () => observer.disconnect()
   }, [])
 
+  // FUNÇÃO PARA ENVIAR O E-MAIL
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    // Substitua os campos abaixo pelos IDs do seu painel EmailJS
+    const serviceID = 'service_ce8wb7y';
+    const templateID = 'template_llj9xjp';
+    const publicKey = '55du7wOqYDgfVpPG3';
+
+    emailjs.sendForm(serviceID, templateID, e.target, publicKey)
+      .then((result) => {
+          alert("Mensagem enviada com sucesso para a PIBARE!");
+          e.target.reset(); // Limpa o formulário após enviar
+      }, (error) => {
+          alert("Erro ao enviar mensagem: " + error.text);
+      })
+      .finally(() => {
+          setIsSending(false);
+      });
+  };
+
   return (
     <section id="contato" className="contact-section">
       <div className="contact-container">
         {/* Header */}
         <div className="contact-header">
-          <h2 className="contact-title">
-            Entre em Contato
-          </h2>
+          <h2 className="contact-title">Entre em Contato</h2>
           <p className="contact-subtitle">
             Estamos aqui para você! Entre em contato conosco para tirar dúvidas, 
             agendar uma visita ou saber mais sobre nossa igreja.
@@ -67,10 +90,7 @@ const Contact = () => {
         <div className="contact-grid">
           {/* Contact Information */}
           <div className="contact-info-section">
-            <h3 className="contact-info-title">
-              Informações de Contato
-            </h3>
-            
+            <h3 className="contact-info-title">Informações de Contato</h3>
             <div className="contact-info-list">
               {contactInfo.map((info, index) => (
                 <div key={index} className="contact-info-card">
@@ -81,9 +101,7 @@ const Contact = () => {
                     <div className="contact-details">
                       <h4 className="contact-details-title">{info.title}</h4>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="contact-detail-text">
-                          {detail}
-                        </p>
+                        <p key={idx} className="contact-detail-text">{detail}</p>
                       ))}
                     </div>
                   </div>
@@ -95,62 +113,51 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="contact-form-section">
             <div className="contact-form-wrapper" id="form-contato" ref={formRef}>
-              <h3 className="contact-form-title">
-                Envie uma Mensagem
-              </h3>
+              <h3 className="contact-form-title">Envie uma Mensagem</h3>
               
-              <form className="contact-form">
+              {/* ADICIONADO: onSubmit chamando sendEmail */}
+              <form className="contact-form" onSubmit={sendEmail}>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="name" className="form-label">
-                      Nome Completo
-                    </label>
+                    <label htmlFor="name" className="form-label">Nome Completo</label>
                     <input
                       type="text"
                       id="name"
-                      name="name"
+                      name="user_name" // Use este nome no template do EmailJS: {{user_name}}
                       className="form-input"
                       placeholder="Seu nome completo"
+                      required
                     />
                   </div>
                   
                   <div className="form-group">
-                    <label htmlFor="email" className="form-label">
-                      E-mail
-                    </label>
+                    <label htmlFor="email" className="form-label">E-mail</label>
                     <input
                       type="email"
                       id="email"
-                      name="email"
+                      name="user_email" // Template: {{user_email}}
                       className="form-input"
                       placeholder="seu@email.com"
+                      required
                     />
                   </div>
                 </div>
 
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="phone" className="form-label">
-                      Telefone
-                    </label>
+                    <label htmlFor="phone" className="form-label">Telefone</label>
                     <input
                       type="tel"
                       id="phone"
-                      name="phone"
+                      name="contact_number" // Template: {{contact_number}}
                       className="form-input"
                       placeholder="(31) 99999-9999"
                     />
                   </div>
                   
                   <div className="form-group">
-                    <label htmlFor="subject" className="form-label">
-                      Assunto
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      className="form-input"
-                    >
+                    <label htmlFor="subject" className="form-label">Assunto</label>
+                    <select id="subject" name="subject" className="form-input" required>
                       <option value="">Selecione um assunto</option>
                       <option value="visita">Quero visitar a igreja</option>
                       <option value="ministerio">Interesse em ministérios</option>
@@ -162,44 +169,41 @@ const Contact = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message" className="form-label">
-                    Mensagem
-                  </label>
+                  <label htmlFor="message" className="form-label">Mensagem</label>
                   <textarea
                     id="message"
-                    name="message"
+                    name="message" // Template: {{message}}
                     rows={6}
                     className="form-textarea"
                     placeholder="Escreva sua mensagem aqui..."
+                    required
                   ></textarea>
                 </div>
 
                 <button 
                   type="submit"
+                  disabled={isSending}
                   className="btn btn-primary btn-full btn-large form-submit"
                 >
                   <Send className="btn-icon" />
-                  Enviar Mensagem
+                  {isSending ? "Enviando..." : "Enviar Mensagem"}
                 </button>
               </form>
             </div>
           </div>
         </div>
-
+        
         {/* Map Section */}
         <div className="map-section">
-          <h3 className="map-title">
-            Nossa Localização
-          </h3>
+          <h3 className="map-title">Nossa Localização</h3>
           <div className="map-placeholder">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.0761138815888!2d-44.156304023954625!3d-19.836732135412618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6ec0d25ecc3c5%3A0x3201ca6d325ccb71!2sR.%20Retiro%20Campestre%2C%20419%20-%20Retiro%2C%20Contagem%20-%20MG%2C%2032050-400!5e0!3m2!1spt-BR!2sbr!4v1760404572606!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.123456789!2d-44.123456!3d-19.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzM0LjkiUyA0NMKwMDYnNDMuNyJX!5e0!3m2!1spt-BR!2sbr!4v123456789"
                 width="100%"
                 height="350"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 title="Mapa PIBARE"
               ></iframe>
           </div>
@@ -210,4 +214,3 @@ const Contact = () => {
 }
 
 export default Contact
-
