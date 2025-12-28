@@ -12,6 +12,7 @@ import Fotos from './components/fotos'
 import Carousel from './components/carousel'
 import Devotionals from './components/devotionals'
 import Videos from './components/videos'
+import Audio from './components/AudioPlayer'
 
 // Importa Rota
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
@@ -20,7 +21,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header /> 
+        <Header />
+        <Audio src="/louvor-fundo.mp3" />
         
         {/* Esta div é a chave para o conteúdo aparecer! */}
         <div className="main-content"> 
