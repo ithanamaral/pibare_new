@@ -8,33 +8,37 @@ const AudioPlayer = ({ src }) => {
   const [isMuted, setIsMuted] = useState(false);
 
   // Tenta iniciar o áudio automaticamente (respeitando as travas do navegador)
-  useEffect(() => {
-    if (audioRef.current) {
+    useEffect(() => {
+    const unlockAudio = () => {
+        if (audioRef.current) {
         audioRef.current.play()
-        .then(() => setIsPlaying(true))
-        .catch(() => console.log("Autoplay bloqueado: aguardando interação."));
-        audioRef.current.volume = 0.5; // Define 50% de volume
-        audioRef.current.muted = false; // Garante que não está mudo
-    }
-  }, []);
+            .then(() => setIsPlaying(true))
+            .catch(() => {});
+        document.removeEventListener('click', unlockAudio);
+        }
+    };
+
+    document.addEventListener('click', unlockAudio);
+    }, []);
 
     const togglePlay = () => {
-    if (!audioRef.current) return;
+        setIsPlaying(true);
+        if (!audioRef.current) return;
 
-    if (isPlaying) {
-        audioRef.current.pause();
-        setIsPlaying(false);
-    } else {
-        // A promessa do play ajuda a entender se houve erro
-        audioRef.current.play()
-        .then(() => {
-            setIsPlaying(true);
-            console.log("Áudio tocando com sucesso!");
-        })
-        .catch((error) => {
-            console.error("Erro ao tentar tocar após o clique:", error);
-        });
-    }
+        if (isPlaying) {
+            audioRef.current.pause();
+            setIsPlaying(false);
+        } else {
+            // A promessa do play ajuda a entender se houve erro
+            audioRef.current.play()
+            .then(() => {
+                setIsPlaying(true);
+                console.log("Áudio tocando com sucesso!");
+            })
+            .catch((error) => {
+                console.error("Erro ao tentar tocar após o clique:", error);
+            });
+        }
     };
 
   const toggleMute = () => {
