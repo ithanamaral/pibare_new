@@ -69,7 +69,7 @@ function Devotionals() {
             humildemente, decida que você será esse cristão.
           </p>
           <p>
-            Fonte:{" "}
+            Fonte:
             <a href="https://voltemosaoevangelho.com/blog/devocionais/submissao-e-humildade-efesios-5-20-21/">
               https://voltemosaoevangelho.com/blog/devocionais/submissao-e-humildade-efesios-5-20-21/
             </a>
