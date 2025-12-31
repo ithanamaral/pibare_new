@@ -9,7 +9,9 @@
   min-height: 100vh;
 }
 
-
+.fonte-url{
+  overflow-wrap: break-word;
+}
 .devotionals h1 {
   text-align: center;
   color: #004aad;       
