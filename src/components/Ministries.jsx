@@ -1,4 +1,4 @@
-import { Users, Baby, Music, Heart, BookOpen, Utensils } from 'lucide-react'
+import { Users, Baby, Music, Heart, BookOpen, Utensils, Album } from 'lucide-react'
 import './Ministries.css'
 
 const Ministries = () => {
@@ -10,9 +10,9 @@ const Ministries = () => {
       color: "ministry-blue",
     },
     {
-      icon: Baby,
-      title: "Ministério Infantil",
-      description: "Cuidado e ensino bíblico para crianças de 0 a 12 anos durante os cultos.",
+      icon: Album,
+      title: "Ministério Pastoral",
+      description: "Cuidado e ensino bíblico para abençoar a igreja e a comunidade.",
       color: "ministry-green",
     },
     {
@@ -74,26 +74,7 @@ const Ministries = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="ministries-cta">
-          <h3 className="cta-title">
-            Encontre Seu Lugar de Serviço
-          </h3>
-          <p className="cta-description">
-            Cada pessoa tem dons únicos dados por Deus. Venha descobrir como você 
-            pode fazer a diferença em nossa comunidade e no Reino de Deus.
-          </p>
-          <div className="cta-buttons">
-            <button className="btn btn-secondary">
-              Quero Participar
-            </button>
-            <a href="#form-contato" className="btn btn-outline-white">
-              Fale Conosco
-            </a>
-          </div>
-        </div>
+        </div>        
       </div>
     </section>
   )

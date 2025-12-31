@@ -139,6 +139,11 @@
 
 .method-description {
   color: var(--color-gray-600);
+
+}
+
+.link-method{
+  text-decoration: none;
 }
 
 .method-arrow {

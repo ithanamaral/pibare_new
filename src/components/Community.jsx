@@ -110,7 +110,7 @@ const Community = () => {
               Por que Escolher Nossa Igreja?
             </h3>
             <p className="values-subtitle">
-              Somos mais que uma igreja, somos uma família unida pelo amor de Cristo
+              Por que é uma igreja biblica buscando cumprir o IDE de Jesus
             </p>
           </div>
 
@@ -121,7 +121,7 @@ const Community = () => {
               </div>
               <h4 className="value-item-title">Amor Genuíno</h4>
               <p className="value-item-description">
-                Experimentamos e compartilhamos o amor incondicional de Cristo em todas as nossas relações.
+                Experimentamos e compartilhamos o amor incondicional de Cristo.
               </p>
             </div>
 

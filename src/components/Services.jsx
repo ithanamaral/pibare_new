@@ -6,8 +6,8 @@ const Services = () => {
   const services = [
     {
       title: "Culto Dominical",
-      time: "Domingos às 9h e 18h",
-      description: "Nosso culto principal com louvor, pregação e comunhão.",
+      time: "Domingos às 9h e 19h",
+      description: "Nosso culto com louvor, pregação e comunhão.",
       icon: Users,
       highlight: true
     },
@@ -22,28 +22,25 @@ const Services = () => {
 
   const upcomingEvents = [
     {
-      date: "18 OUT",
-      title: "Boliche dos Jovens",
-      time: "19h30",
-      description: "Shopping do Avião"
+      date: "04 DEZ",
+      title: "Café da Manhã",
+      time: "9h",
+      description: "Momento de comunhão e muito sabor!",
+      locale: "Local: Igreja"
     },
     {
-      date: "18 OUT",
-      title: "Retiro da MCM Regional",
-      time: "19h30",
-      description: "Vargem das Flores/Contagem"
+      date: "11 JAN",
+      title: "Culto de Primícias",
+      time: "19h",
+      description: "Momento de gratidão para agradecermos a Deus pela provisão!",
+      locale: "Local: Igreja"
     },
     {
-      date: "25 DEZ",
-      title: "Culto de Natal",
+      date: "17 FEV",
+      title: "Imersão Biblica Feriado de Carnaval",
       time: "18h",
-      description: "Celebração especial do nascimento de Jesus Cristo"
-    },
-    {
-      date: "31 DEZ",
-      title: "Vigília de Ano Novo",
-      time: "22h",
-      description: "Culto de gratidão e expectativa para o novo ano"
+      description: "Momento para aprofundar na Palavra de Deus em comunhão.",
+      locale: "Local: Igreja"
     }
   ]
 
@@ -138,6 +135,9 @@ const Services = () => {
                 </p>
                 <p className="event-description">
                   {event.description}
+                </p>
+                <p className="event-description">
+                  {event.locale}
                 </p>
               </div>
             ))}

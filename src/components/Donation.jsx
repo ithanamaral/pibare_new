@@ -1,5 +1,6 @@
 import { Heart, CreditCard, Smartphone, Building, ArrowRight } from 'lucide-react'
 import './Donation.css'
+import { Link } from 'react-router-dom';
 
 const Donation = () => {
   const donationMethods = [
@@ -37,6 +38,7 @@ const Donation = () => {
             
             <div className="methods-list">
               {donationMethods.map((method, index) => (
+                <Link to="/pix" className='link-method'>
                 <div key={index} className="method-card">
                   <div className="method-content">
                     <div className={`method-icon-wrapper ${method.color}`}>
@@ -51,14 +53,8 @@ const Donation = () => {
                     <ArrowRight className="method-arrow" />
                   </div>
                 </div>
+                </Link>
               ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="donation-buttons">
-              <button className="btn btn-primary btn-full btn-large">
-                Doar Agora
-              </button>
             </div>
           </div>
         </div>

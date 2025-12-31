@@ -1,5 +1,13 @@
-import { Heart, MapPin, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react'
-import './Footer.css'
+import {
+  Heart,
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
+import "./Footer.css";
 
 const Footer = () => {
   const quickLinks = [
@@ -7,16 +15,16 @@ const Footer = () => {
     { name: "Sobre Nós", href: "#sobre" },
     { name: "Cultos", href: "#cultos" },
     { name: "Ministérios", href: "#ministerios" },
-    { name: "Contato", href: "#contato" }
-  ]
+    { name: "Contato", href: "#contato" },
+  ];
 
   const ministries = [
     { name: "Ministério de Jovens", href: "#" },
-    { name: "Ministério Infantil", href: "#" },
+    { name: "Ministério Pastoral", href: "#" },
     { name: "Ministério de Louvor", href: "#" },
     { name: "Ministério Social", href: "#" },
-    { name: "Escola Bíblica", href: "#" }
-  ]
+    { name: "Escola Bíblica", href: "#" },
+  ];
 
   return (
     <footer className="footer">
@@ -29,23 +37,29 @@ const Footer = () => {
               <span className="footer-logo-text">PIBARE</span>
             </div>
             <p className="footer-description">
-              Uma comunidade de fé, amor e esperança onde todos são bem-vindos. 
-              Transformando vidas através do amor de Cristo há mais de 20 anos.
+              A Primeira Igreja Batista no Retiro, foi fundada em 2004, filha da
+              primeira igreja Batista do Água Branca, Contagem. É uma comunidade de
+              fé, amor e esperança onde todos são bem-vindos. Transformando
+              vidas através do amor de Cristo há mais de 20 anos.
             </p>
-            
+
             {/* Contact Info */}
             <div className="footer-contact">
               <div className="footer-contact-item">
                 <MapPin className="footer-contact-icon" />
-                <span className="footer-contact-text">Rua Retiro Campestre, 419, Retiro - Contagem, MG</span>
+                <span className="footer-contact-text">
+                  Rua Retiro Campestre, 419, Retiro - Contagem, MG
+                </span>
               </div>
               <div className="footer-contact-item">
                 <Phone className="footer-contact-icon" />
-                <span className="footer-contact-text">(11) 1234-5678</span>
+                <span className="footer-contact-text">(31) 98359-7825</span>
               </div>
               <div className="footer-contact-item">
                 <Mail className="footer-contact-icon" />
-                <span className="footer-contact-text">pastoral.pibare@Gmail.com</span>
+                <span className="footer-contact-text">
+                  pastoral.pibare@gmail.com
+                </span>
               </div>
             </div>
           </div>
@@ -88,7 +102,9 @@ const Footer = () => {
               </div>
               <div className="footer-schedule-item">
                 <div className="footer-schedule-day">Quartas-feiras</div>
-                <div className="footer-schedule-time">19h30 (Culto de Oração)</div>
+                <div className="footer-schedule-time">
+                  19h30 (Culto de Oração)
+                </div>
               </div>
             </div>
           </div>
@@ -115,8 +131,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
-
+export default Footer;

@@ -1,0 +1,32 @@
+.pix-main {
+  max-width: 800px;      
+  margin: 0 auto;
+  margin-top: 70px;        
+  padding: 40px 20px;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  min-height: 100vh;
+}
+
+
+.pix-main h1 {
+  text-align: center;
+  color: #004aad;       
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.pix-main p {     
+  margin-bottom: 20px;
+}
+
+.pix-main img{
+    margin-bottom: 30px;
+}
+
+.key-pix{
+    font-weight: bold;
+    word-break: break-all;
+    font-size: larger;
+}

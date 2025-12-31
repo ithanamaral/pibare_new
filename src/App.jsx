@@ -13,6 +13,7 @@ import Carousel from './components/carousel'
 import Devotionals from './components/devotionals'
 import Videos from './components/videos'
 import Audio from './components/AudioPlayer'
+import Pix from './components/Pix'
 
 // Importa Rota
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
@@ -38,7 +39,7 @@ function App() {
                 <Contact />
               </>
             } />
-
+            <Route path="/pix" element={<Pix />} />
             <Route path="/about" element={<About />} />
             <Route path="/fotos" element={<Fotos />} />
             <Route path="/devotionals" element={<Devotionals />} />

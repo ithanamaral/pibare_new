@@ -1,7 +1,7 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
-import './Contact.css'
-import { useEffect, useRef, useState } from 'react'
-import emailjs from '@emailjs/browser';
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import "./Contact.css";
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -11,47 +11,51 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Endereço",
-      details: ["Rua Retiro Campestre, 419", "Retiro - Contagem, MG", "CEP: 32050-400"],
-      color: "contact-blue"
+      details: [
+        "Rua Retiro Campestre, 419",
+        "Retiro - Contagem, MG",
+        "CEP: 32050-400",
+      ],
+      color: "contact-blue",
     },
     {
       icon: Phone,
       title: "Telefone",
       details: ["(31) 98359-7825", "(31) 99298-2421", "WhatsApp disponível"],
-      color: "contact-green"
+      color: "contact-green",
     },
     {
       icon: Mail,
       title: "E-mail",
-      details: ["pastoral.pibare@Gmail.com"],
-      color: "contact-purple"
+      details: ["pastoral.pibare@gmail.com"],
+      color: "contact-purple",
     },
     {
       icon: Clock,
       title: "Horários",
       details: ["Dom: 9h e 19h", "Qua: 19h30"],
-      color: "contact-orange"
-    }
-  ]
+      color: "contact-orange",
+    },
+  ];
 
   // Efeito de "blink" quando o formulário entra na tela
   useEffect(() => {
-    const formEl = formRef.current
-    if (!formEl) return
+    const formEl = formRef.current;
+    if (!formEl) return;
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          formEl.classList.add('blink')
+          formEl.classList.add("blink");
           setTimeout(() => {
-            formEl.classList.remove('blink')
-          }, 1200)
+            formEl.classList.remove("blink");
+          }, 1200);
         }
       },
       { threshold: 0.5 }
-    )
-    observer.observe(formEl)
-    return () => observer.disconnect()
-  }, [])
+    );
+    observer.observe(formEl);
+    return () => observer.disconnect();
+  }, []);
 
   // FUNÇÃO PARA ENVIAR O E-MAIL
   const sendEmail = (e) => {
@@ -59,19 +63,23 @@ const Contact = () => {
     setIsSending(true);
 
     // Substitua os campos abaixo pelos IDs do seu painel EmailJS
-    const serviceID = 'service_ce8wb7y';
-    const templateID = 'template_llj9xjp';
-    const publicKey = '55du7wOqYDgfVpPG3';
+    const serviceID = "service_ce8wb7y";
+    const templateID = "template_llj9xjp";
+    const publicKey = "55du7wOqYDgfVpPG3";
 
-    emailjs.sendForm(serviceID, templateID, e.target, publicKey)
-      .then((result) => {
+    emailjs
+      .sendForm(serviceID, templateID, e.target, publicKey)
+      .then(
+        (result) => {
           alert("Mensagem enviada com sucesso para a PIBARE!");
           e.target.reset(); // Limpa o formulário após enviar
-      }, (error) => {
+        },
+        (error) => {
           alert("Erro ao enviar mensagem: " + error.text);
-      })
+        }
+      )
       .finally(() => {
-          setIsSending(false);
+        setIsSending(false);
       });
   };
 
@@ -82,7 +90,7 @@ const Contact = () => {
         <div className="contact-header">
           <h2 className="contact-title">Entre em Contato</h2>
           <p className="contact-subtitle">
-            Estamos aqui para você! Entre em contato conosco para tirar dúvidas, 
+            Estamos aqui para você! Entre em contato conosco para tirar dúvidas,
             agendar uma visita ou saber mais sobre nossa igreja.
           </p>
         </div>
@@ -101,7 +109,9 @@ const Contact = () => {
                     <div className="contact-details">
                       <h4 className="contact-details-title">{info.title}</h4>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="contact-detail-text">{detail}</p>
+                        <p key={idx} className="contact-detail-text">
+                          {detail}
+                        </p>
                       ))}
                     </div>
                   </div>
@@ -112,14 +122,20 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="contact-form-section">
-            <div className="contact-form-wrapper" id="form-contato" ref={formRef}>
+            <div
+              className="contact-form-wrapper"
+              id="form-contato"
+              ref={formRef}
+            >
               <h3 className="contact-form-title">Envie uma Mensagem</h3>
-              
+
               {/* ADICIONADO: onSubmit chamando sendEmail */}
               <form className="contact-form" onSubmit={sendEmail}>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="name" className="form-label">Nome Completo</label>
+                    <label htmlFor="name" className="form-label">
+                      Nome Completo
+                    </label>
                     <input
                       type="text"
                       id="name"
@@ -129,9 +145,11 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="form-group">
-                    <label htmlFor="email" className="form-label">E-mail</label>
+                    <label htmlFor="email" className="form-label">
+                      E-mail
+                    </label>
                     <input
                       type="email"
                       id="email"
@@ -145,7 +163,9 @@ const Contact = () => {
 
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="phone" className="form-label">Telefone</label>
+                    <label htmlFor="phone" className="form-label">
+                      Telefone
+                    </label>
                     <input
                       type="tel"
                       id="phone"
@@ -154,13 +174,22 @@ const Contact = () => {
                       placeholder="(31) 99999-9999"
                     />
                   </div>
-                  
+
                   <div className="form-group">
-                    <label htmlFor="subject" className="form-label">Assunto</label>
-                    <select id="subject" name="subject" className="form-input" required>
+                    <label htmlFor="subject" className="form-label">
+                      Assunto
+                    </label>
+                    <select
+                      id="subject"
+                      name="subject"
+                      className="form-input"
+                      required
+                    >
                       <option value="">Selecione um assunto</option>
                       <option value="visita">Quero visitar a igreja</option>
-                      <option value="ministerio">Interesse em ministérios</option>
+                      <option value="ministerio">
+                        Interesse em ministérios
+                      </option>
                       <option value="oracao">Pedido de oração</option>
                       <option value="evento">Informações sobre eventos</option>
                       <option value="outro">Outro assunto</option>
@@ -169,7 +198,9 @@ const Contact = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message" className="form-label">Mensagem</label>
+                  <label htmlFor="message" className="form-label">
+                    Mensagem
+                  </label>
                   <textarea
                     id="message"
                     name="message" // Template: {{message}}
@@ -180,7 +211,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button 
+                <button
                   type="submit"
                   disabled={isSending}
                   className="btn btn-primary btn-full btn-large form-submit"
@@ -192,25 +223,25 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Map Section */}
         <div className="map-section">
           <h3 className="map-title">Nossa Localização</h3>
           <div className="map-placeholder">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.123456789!2d-44.123456!3d-19.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzM0LjkiUyA0NMKwMDYnNDMuNyJX!5e0!3m2!1spt-BR!2sbr!4v123456789"
-                width="100%"
-                height="350"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                title="Mapa PIBARE"
-              ></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7506.160745429982!2d-44.15346547984869!3d-19.83655190600184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6ec0d2c494173%3A0xbcde44c3d3573ca1!2sR.%20Retiro%20Campestre%2C%20419%20-%20Retiro%2C%20Contagem%20-%20MG%2C%2032050-400%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1767219351637!5m2!1spt-BR!2sus"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              title="Mapa PIBARE"
+            ></iframe>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
