@@ -1,46 +1,44 @@
-import { Star, Quote } from 'lucide-react'
-import communitySmiling from '../assets/Foto22.jpeg'
-import './Community.css'
+import { Star, Quote } from "lucide-react";
+import communitySmiling from "../assets/Foto22.jpeg";
+import "./Community.css";
 
 const Community = () => {
   const testimonials = [
     {
-      name: "Maria Silva",
-      role: "Membro há 5 anos",
-      text: "Encontrei na Igreja Esperança não apenas um lugar de adoração, mas uma verdadeira família. O amor e cuidado que recebo aqui transformaram minha vida completamente.",
-      rating: 5
+      name: "Everaldo Mansur",
+      role: "Membro fundador",
+      text: "Vejo a minha igreja como uma família. Como toda família, tem virtudes e falhas, mas é onde pertenço, onde construí minha história e onde continuo sendo edificado na fé",
+      rating: 5,
     },
     {
-      name: "João Santos",
-      role: "Líder do Ministério de Jovens",
-      text: "Cresci espiritualmente de forma incrível aqui. A igreja me deu oportunidades de servir e descobrir meus dons. Hoje posso impactar a vida de outros jovens.",
-      rating: 5
+      name: "Guiomar",
+      role: "Membro fundador",
+      text: "Como descrever a Pib Retiro ? Eu Guiomar,  declaro que no meu coração só existe amor e gratidão por cada irmão que faz parte  desta família abençoada em Cristo Jesus. A igreja é a minha segunda casa, amo estar com com meus irmãos, em Cristo e em comunhão.",
+      rating: 5,
     },
     {
-      name: "Ana Costa",
-      role: "Membro há 3 anos",
-      text: "Depois de um período difícil na minha vida, encontrei esperança e restauração nesta comunidade. As pessoas aqui realmente vivem o amor de Cristo.",
-      rating: 5
-    }
-  ]
+      name: "Genália",
+      role: "Membro fundador",
+      text: "PIB Retiro! Lugar agradável onde a palavra de Deus é realmente pregada e com irmãos amáveis !!!",
+      rating: 5,
+    },
+  ];
 
   const stats = [
     { number: "500+", label: "Membros Ativos" },
     { number: "20+", label: "Anos de Ministério" },
     { number: "15", label: "Ministérios Ativos" },
-    { number: "100+", label: "Vidas Transformadas" }
-  ]
+    { number: "100+", label: "Vidas Transformadas" },
+  ];
 
   return (
     <section className="community-section">
       <div className="community-container">
         {/* Header */}
         <div className="community-header">
-          <h2 className="community-title">
-            Nossa Comunidade
-          </h2>
+          <h2 className="community-title">Nossa Comunidade</h2>
           <p className="community-subtitle">
-            Conheça as histórias de pessoas que encontraram esperança, propósito 
+            Conheça as histórias de pessoas que encontraram esperança, propósito
             e uma nova família em nossa igreja.
           </p>
         </div>
@@ -49,13 +47,13 @@ const Community = () => {
           {/* Community Image */}
           <div className="community-image-wrapper">
             <div className="community-image-container">
-              <img 
-                src={communitySmiling} 
-                alt="Membros da comunidade sorrindo" 
+              <img
+                src={communitySmiling}
+                alt="Membros da comunidade sorrindo"
                 className="community-image"
               />
               <div className="community-image-overlay"></div>
-              
+
               {/* Overlay Stats */}
               <div className="community-stats">
                 <div className="stats-grid">
@@ -72,15 +70,13 @@ const Community = () => {
 
           {/* Testimonials */}
           <div className="testimonials-wrapper">
-            <h3 className="testimonials-title">
-              Testemunhos de Fé
-            </h3>
-            
+            <h3 className="testimonials-title">Testemunhos de Fé</h3>
+
             {testimonials.map((testimonial, index) => (
               <div key={index} className="testimonial-card">
                 {/* Quote Icon */}
                 <Quote className="testimonial-quote-icon" />
-                
+
                 {/* Rating */}
                 <div className="testimonial-rating">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -89,9 +85,7 @@ const Community = () => {
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="testimonial-text">
-                  "{testimonial.text}"
-                </p>
+                <p className="testimonial-text">"{testimonial.text}"</p>
 
                 {/* Author */}
                 <div className="testimonial-author">
@@ -106,9 +100,7 @@ const Community = () => {
         {/* Community Values */}
         <div className="community-values">
           <div className="values-header">
-            <h3 className="values-title">
-              Por que Escolher Nossa Igreja?
-            </h3>
+            <h3 className="values-title">Por que Escolher Nossa Igreja?</h3>
             <p className="values-subtitle">
               Por que é uma igreja biblica buscando cumprir o IDE de Jesus
             </p>
@@ -131,7 +123,8 @@ const Community = () => {
               </div>
               <h4 className="value-item-title">Crescimento</h4>
               <p className="value-item-description">
-                Oferecemos oportunidades para crescimento espiritual, pessoal e ministerial.
+                Oferecemos oportunidades para crescimento espiritual, pessoal e
+                ministerial.
               </p>
             </div>
 
@@ -141,15 +134,15 @@ const Community = () => {
               </div>
               <h4 className="value-item-title">Comunhão</h4>
               <p className="value-item-description">
-                Construímos relacionamentos duradouros baseados na fé e no cuidado mútuo.
+                Construímos relacionamentos duradouros baseados na fé e no
+                cuidado mútuo.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Community
-
+export default Community;
