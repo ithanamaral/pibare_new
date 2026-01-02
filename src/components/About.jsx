@@ -43,7 +43,7 @@ const About = () => {
                 A{" "}
                 <span className="bold">Primeira Igreja Batista no Retiro</span>,
                 foi fundada em 2004, filha da primeira igreja Batista do Água
-                Branca, Contagem. Temos como <span className="bold">Igreja de Cristo</span> o propósito de ser
+                Branca, Contagem/MG. Temos como <span className="bold">Igreja de Cristo</span> o propósito de ser
                 uma agência do Reino de Deus para servir ao Senhor e
                 <span className="bold"> levar Sua Palavra com amor e fé</span>,
                 buscando ser um ambiente que propicie o{" "}

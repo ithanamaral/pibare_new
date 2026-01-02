@@ -38,8 +38,10 @@ const Footer = () => {
             </div>
             <p className="footer-description">
               A Primeira Igreja Batista no Retiro, foi fundada em 2004, filha da
-              primeira igreja Batista do Água Branca, Contagem. É uma comunidade de
-              fé, amor e esperança onde todos são bem-vindos. Transformando
+              primeira igreja Batista do Água Branca, Contagem/MG. É uma comunidade de
+              fé, amor e esperança onde todos são bem-vindos. 
+            </p>
+            <p className="footer-description">Transformando
               vidas através do amor de Cristo há mais de 20 anos.
             </p>
 
