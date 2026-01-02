@@ -12,14 +12,14 @@ const Community = () => {
     },
     {
       name: "Guiomar",
-      role: "Membro fundador",
+      role: "Membro fundadora",
       text: "Como descrever a Pib Retiro ? Eu Guiomar,  declaro que no meu coração só existe amor e gratidão por cada irmão que faz parte  desta família abençoada em Cristo Jesus. A igreja é a minha segunda casa, amo estar com com meus irmãos, em Cristo e em comunhão.",
       rating: 5,
     },
     {
       name: "Genália",
-      role: "Membro fundador",
-      text: "PIB Retiro! Lugar agradável onde a palavra de Deus é realmente pregada e com irmãos amáveis !!!",
+      role: "Membro fundadora",
+      text: "PIB Retiro! Lugar agradável onde a palavra de Deus é realmente pregada e com irmãos amáveis!!!",
       rating: 5,
     },
   ];
