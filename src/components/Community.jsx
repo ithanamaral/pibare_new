@@ -101,7 +101,7 @@ const Community = () => {
           <div className="values-header">
             <h3 className="values-title">Por que Escolher Nossa Igreja?</h3>
             <p className="values-subtitle">
-              Por que é uma igreja biblica buscando cumprir o IDE de Jesus
+              Por que é uma igreja bíblica buscando cumprir o IDE de Jesus.
             </p>
           </div>
 

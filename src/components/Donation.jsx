@@ -24,8 +24,7 @@ const Donation = () => {
             Faça Parte da Obra
           </h2>
           <p className="donation-subtitle">
-            Sua contribuição nos ajuda a continuar transformando vidas e 
-            expandindo o Reino de Deus em nossa comunidade e além.
+           Ao contribuir, você se torna parte da transformação de vidas e da expansão do Reino de Deus conosco.
           </p>
         </div>
 
