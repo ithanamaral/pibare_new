@@ -25,7 +25,6 @@ const Community = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Membros Ativos" },
     { number: "20+", label: "Anos de Ministério" },
     { number: "15", label: "Ministérios Ativos" },
     { number: "100+", label: "Vidas Transformadas" },
