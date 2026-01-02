@@ -116,7 +116,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <div className="footer-copyright">
-              © 2025 Igreja Esperança. Todos os direitos reservados.
+              © 2026 Primeira Igreja Batista no Retiro. Todos os direitos reservados.
             </div>
             <div className="footer-legal-links">
               <a href="#" className="footer-legal-link">
