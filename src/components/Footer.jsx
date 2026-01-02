@@ -19,11 +19,11 @@ const Footer = () => {
   ];
 
   const ministries = [
-    { name: "Ministério de Jovens", href: "#" },
-    { name: "Ministério Pastoral", href: "#" },
-    { name: "Ministério de Louvor", href: "#" },
-    { name: "Ministério Social", href: "#" },
-    { name: "Escola Bíblica", href: "#" },
+    { name: "Ministério de Jovens", href: "#ministerios" },
+    { name: "Ministério Pastoral", href: "#ministerios" },
+    { name: "Ministério de Louvor", href: "#ministerios" },
+    { name: "Ministério Social", href: "#ministerios" },
+    { name: "Escola Bíblica", href: "#ministerios" },
   ];
 
   return (
