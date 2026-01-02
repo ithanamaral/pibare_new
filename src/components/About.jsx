@@ -102,13 +102,6 @@ const About = () => {
                 <div className="stat-label">Anos de Ministério</div>
               </div>
             </div>
-
-            <div className="stat-card stat-card-right">
-              <div className="stat-content">
-                <div className="stat-number">500+</div>
-                <div className="stat-label">Membros Ativos</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
