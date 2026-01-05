@@ -70,7 +70,7 @@ function Devotionals() {
           </p>
           <p>
             Fonte:{" "}
-            <a href="https://voltemosaoevangelho.com/blog/devocionais/submissao-e-humildade-efesios-5-20-21/" className="fonte-url">
+            <a href="https://voltemosaoevangelho.com/blog/devocionais/submissao-e-humildade-efesios-5-20-21/" target="_blank" className="fonte-url">
               https://voltemosaoevangelho.com/blog/devocionais/submissao-e-humildade-efesios-5-20-21/
             </a>
           </p>
