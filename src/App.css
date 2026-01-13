@@ -7,10 +7,7 @@
 
 
 /* Container que envolve as rotas */
-.main-content {
-  /* Altere para a altura aproximada do seu Header (ex: 80px ou 100px) */
-  padding-top: 90px; 
-  
+.main-content { 
   /* Garante que o conteúdo ocupe a tela toda para o Footer não subir */
   min-height: calc(100vh - 90px); 
 }

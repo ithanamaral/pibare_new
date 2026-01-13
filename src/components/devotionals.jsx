@@ -5,51 +5,50 @@ function Devotionals() {
   return (
     <>
       <main className="devotionals">
-        <h1>Calmo Repouso (Oséias 2.18)</h1>
+        <h1>A Fé Vê o Arco-íris (Génesis 9 .14)</h1>
         <p className="reflexao">
-          "E naquele dia farei por eles aliança com as feras do campo, e com as
-          aves do céu, e com os répteis da terra; e da terra quebrarei o arco, e
-          a espada, e a guerra, e os farei deitar em segurança." (Oséias 2:18)
+          "Sucederá que, quando eu trouxer nuvens sobre a terra, e nelas
+          aparecer o arco."
         </p>
         <section className="text">
           <p className="texto">
-            Sim, os crentes precisam desfrutar de paz. A passagem de onde
-            retiramos essa graciosa promessa fala sobre paz ” com as
-            bestas-feras do campo, e com as aves do céu, e com os répteis da
-            terra”. Isto significa paz com os inimigos terrenos, com males
-            misteriosos e livre de alguns aborrecimentos! Qualquer dessas coisas
-            pode nos impedir de descansar, mas nenhuma delas conseguirá fazê-lo.
-            O Senhor destruirá as coisas que ameaçam seu povo – “Tirarei … o
-            arco, e a espada, e a guerra”. A paz será realmente profunda, quando
-            todos os instrumentos de inquietação forem despedaçados.
+            Até hoje existem muitas nuvens escuras, mas não tememos que o mundo
+            será destruído por um dilúvio. Vemos o arco-íris freqüentemente nos
+            prevenindo, para que não tenhamos esse temor. A aliança que Deus
+            estabeleceu com Noé permanece, e não devemos nutrir qualquer dúvida
+            a respeito dela. Por que, então, devemos pensar que as nuvens de
+            aflição que agora escurecem nosso céu terminarão em nossa
+            destruição? Rejeitemos esses pensamentos desonrosos e sem
+            fundamentos.
           </p>
 
           <p className="texto">
-            Com a paz virá o descanso. “Ele dá aos seus amados o sono.”
-            Completamente supridos e tranqüilizados por Deus, os crentes
-            descansam em calmo repouso.
+            A fé sempre vê o arco-íris da promessa da aliança, onde quer que
+            nossos sentimentos percebam as nuvens de aflição. Deus tem um arco
+            com o qual Ele poderia atirar suas flechas de destruição. Porém,
+            veja que o arco-íris está voltado par~ cima; é um arco que está
+            destituído de corda ou de flechas. E um arco pendurado apenas para
+            ser visto e não mais utilizado para a guerra. É um arco de várias
+            cores, expressando alegria e deleite, e não um arco avermelhado por
+            carnificina, ou um arco escurecido por ira.
           </p>
 
           <p className="texto">
-            Esse descanso será seguro. Uma coisa é repousar, outra bem diferente
-            é “repousar em segurança”. Fomos trazidos à terra da promessa, à
-            casa do Pai, à câmara do amor, ao seio de Cristo. Com certeza, agora
-            podemos “repousar em segurança”. Descansar em paz é mais seguro para
-            o crente do que assentar-se e inquietar-se.
-          </p>
-
-          <p className="texto">
-            “Ele me faz repousar em pastos verdejantes” (Sl 23.2). Nunca
-            descansaremos enquanto o Consolador não nos fizer repousar.
+            Tenhamos bom ânimo. Deus jamais escureceu nosso céu a ponto de
+            deixar sua aliança sem uma testemunha; e, mesmo que o tenha feito,
+            devemos confiar nEle, visto que Ele não muda, não mente e não falha,
+            de maneira alguma, em manter sua aliança de paz. Até que as águas
+            inundem a terra novamente, não temos qualquer motivo para duvidar de
+            nosso Deus.
           </p>
           <p>
             Fonte:{" "}
             <a
-              href="https://voltemosaoevangelho.com/blog/devocionais/4-de-janeiro-calmo-repouso//"
+              href="https://voltemosaoevangelho.com/blog/devocionais/11-de-janeiro-a-fe-ve-o-arco-iris/"
               target="_blank"
               className="fonte-url"
             >
-              https://voltemosaoevangelho.com/blog/devocionais/4-de-janeiro-calmo-repouso/
+              https://voltemosaoevangelho.com/blog/devocionais/11-de-janeiro-a-fe-ve-o-arco-iris/
             </a>
           </p>
         </section>

@@ -1,0 +1,75 @@
+.video-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Um cinza bem leve para dar contraste com o branco */
+}
+
+/* Título principal da seção */
+.video-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* CORREÇÃO AQUI: Grid Real */
+.video-grid {
+  display: grid;
+  /* Cria colunas automaticamente: no desktop tenta colocar 3 ou mais, no celular 1 */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.video-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column; /* Garante que o player fique em cima e o texto embaixo */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  border-color: #1518b2;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.video-player {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Mantém a proporção de vídeo sem esticar */
+  display: block;
+  background: #000;
+  object-fit: contain; /* Garante que o vídeo não seja cortado dentro do player */
+}
+
+.video-info {
+  padding: 20px;
+  background-color: white; /* Limpo e profissional */
+  flex-grow: 1; /* Faz todos os cards terem o mesmo tamanho se o texto variar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-info .video-title-span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* RESPONSIVO: No desktop não precisamos forçar altura, o Grid faz isso */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr; /* Força uma única coluna no celular */
+  }
+  
+  .video-title {
+    font-size: 1.8rem;
+  }
+}

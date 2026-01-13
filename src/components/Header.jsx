@@ -29,7 +29,7 @@ const Header = () => {
             <Link to="/" className='nav-link'>Início</Link>
             <Link to="/devotionals" className='nav-link'>Devocionais</Link>
             <Link to="/fotos" className='nav-link'>Nossas Fotos</Link>
-            {/* <Link to="/videos" className='nav-link'>Vídeos</Link> */}
+            <Link to="/videos" className='nav-link'>Vídeos</Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -46,7 +46,7 @@ const Header = () => {
             <Link to="/" className='mobile-nav-link' onClick={toggleMenu}>Início</Link>
             <Link to="/devotionals" className='mobile-nav-link' onClick={toggleMenu}>Devocionais</Link>
             <Link to="/fotos" className='mobile-nav-link' onClick={toggleMenu}>Nossas Fotos</Link>
-            {/* <Link to="/videos" className='mobile-nav-link' onClick={toggleMenu}>Vídeos</Link> */}
+            <Link to="/videos" className='mobile-nav-link' onClick={toggleMenu}>Vídeos</Link>
           </nav>
         )}
       </div>

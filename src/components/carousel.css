@@ -1,53 +1,116 @@
+/* 1. CONTAINER PRINCIPAL: Moldura moderna e responsiva */
 .carrossel-container {
   width: 100%;
-  /* Reduzi para 600px para não ocupar a tela toda no seu Ryzen 5, 
-     mas pode manter 800px se preferir */
-  height: 600px; 
+  max-width: 1200px; /* Limite executivo para não esticar no seu Ryzen 5 */
+  margin: 2rem auto;
+  border-radius: 16px; /* Bordas arredondadas como as de apps premium */
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Sombra para dar profundidade */
   position: relative;
-  overflow: hidden; /* Importante para não vazar imagem */
+  background-color: #000;
+  /* Proporção 16:9 no Desktop, muda no mobile via Media Query */
+  aspect-ratio: 16 / 9;
 }
 
-/* Força o Swiper a ocupar 100% da altura do container pai */
+/* 2. SWIPER: Ocupa o espaço total da moldura */
 .swiper {
   width: 100%;
   height: 100%;
 }
 
+/* 3. SLIDE ITEM: Centralização perfeita */
 .slide-item {
   width: 100%;
   height: 100%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0a0a;
 }
 
+/* 4. IMAGEM: Foco no conteúdo sem distorção */
 .slide-item img {
   width: 100%;
   height: 100%;
-  /* ESSENCIAL: Mantém a proporção e corta o que sobrar */
-  object-fit: cover; 
+  /* 'contain' para fotos como a da igreja/caixa aparecerem INTEIRAS */
+  object-fit: contain; 
   display: block;
+  z-index: 1;
 }
 
-/* FIXAR AS BOLINHAS */
-.swiper-pagination {
-  /* Garante que elas fiquem sempre a 20px do fundo do container de 600px */
-  bottom: 20px !important; 
+/* 5. LEGENDA (CAPTION): Estilo Glassmorphism (Vidro Fosco) */
+.slide-caption {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  min-width: 200px;
+  max-width: 80%;
+  padding: 12px 24px;
+  /* Efeito de transparência moderna que ajuda na acessibilidade */
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px; /* Formato pílula */
+  color: #ffffff;
+  text-align: center;
   z-index: 10;
 }
 
+.slide-caption h2 {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* 6. PAGINAÇÃO: Bolinhas minimalistas */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
 .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: #fff !important; /* Branco para destacar nas fotos */
-  opacity: 0.7;
+  width: 8px;
+  height: 8px;
+  background: #fff !important;
+  opacity: 0.3;
+  transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background: #1518b2 !important; /* Sua cor escura para o ativo */
+  width: 24px; /* Efeito pílula na bolinha ativa */
+  border-radius: 4px;
+  background: #004aad !important; /* Seu azul de destaque */
   opacity: 1;
 }
 
+/* 7. SETAS DE NAVEGAÇÃO: Visíveis mas discretas */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  transform: scale(0.6);
+  background: rgba(0,0,0,0.2);
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+}
+
+/* 8. RESPONSIVIDADE (O conserto para Mobile) */
 @media (max-width: 768px) {
   .carrossel-container {
-    height: 300px; /* Altura menor para celulares */
+    /* No celular, fotos verticais precisam de mais altura (4:5) */
+    aspect-ratio: 4 / 5; 
+    border-radius: 0; /* Remove bordas para ocupar a largura total do celular */
+    margin: 0;
+  }
+
+  .slide-caption {
+    bottom: 50px; /* Sobe a legenda para não cobrir as bolinhas */
+    width: 90%;
   }
 }

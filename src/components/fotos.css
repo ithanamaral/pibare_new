@@ -1,6 +1,7 @@
 .titulo-fotos {
-  color: #333;          /* Garante uma cor visível */
-  text-align: center;    /* Centraliza */
-  display: block;       /* Garante que se comporte como bloco */
-  margin-bottom: 20px;    /* Dá espaço para o carrossel */
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 2rem;  /* Dá espaço para o carrossel */
 }
