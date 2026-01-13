@@ -5,7 +5,7 @@ function Fotos() {
   return (
     <>
       <h3 className="titulo-fotos">
-        SEGUE ABAIXO AS NOSSAS FOTOS
+        Linha do Tempo
       </h3>
       <Carousel />
     </>
