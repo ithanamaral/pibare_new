@@ -39,7 +39,6 @@ function App() {
                 <Contact />
               </>
             } />
-            <Route path="/pix" element={<Pix />} />
             <Route path="/about" element={<About />} />
             <Route path="/fotos" element={<Fotos />} />
             <Route path="/devotionals" element={<Devotionals />} />
