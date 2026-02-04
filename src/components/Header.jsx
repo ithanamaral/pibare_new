@@ -30,6 +30,7 @@ const Header = () => {
             <Link to="/devotionals" className='nav-link'>Devocionais</Link>
             <Link to="/fotos" className='nav-link'>Nossas Fotos</Link>
             <Link to="/videos" className='nav-link'>Vídeos</Link>
+            <Link to="/eventos" className='nav-link'>Eventos</Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -47,6 +48,7 @@ const Header = () => {
             <Link to="/devotionals" className='mobile-nav-link' onClick={toggleMenu}>Devocionais</Link>
             <Link to="/fotos" className='mobile-nav-link' onClick={toggleMenu}>Nossas Fotos</Link>
             <Link to="/videos" className='mobile-nav-link' onClick={toggleMenu}>Vídeos</Link>
+            <Link to="/eventos" className='mobile-nav-link' onClick={toggleMenu}>Eventos</Link>
           </nav>
         )}
       </div>
