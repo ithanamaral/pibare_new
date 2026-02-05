@@ -1,6 +1,7 @@
 import React from 'react';
 import '../components/Event.css';
 import imagem from '../assets/imersao.jpeg'; 
+import { ArrowDownToLine } from "lucide-react";
 
 function Event() {
   return (
@@ -9,10 +10,11 @@ function Event() {
       
       <div className="event-container">
         {/* Envolvemos a imagem em um link para download */}
-        <a href={imagem} download="evento-imersao.jpeg" className="download-link">
           <img src={imagem} alt="Imagem do evento" className="event-image" />
-        </a>
-        <p className="download-info">Clique na imagem para baixar</p>
+          <a href={imagem} download="evento-imersao" className="download-link">
+          <ArrowDownToLine />
+          Clique aqui para baixar a imagem
+          </a>
       </div>
     </main>
   );

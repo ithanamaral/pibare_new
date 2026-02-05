@@ -214,7 +214,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSending}
-                  className="btn btn-primary btn-full btn-large form-submit"
+                  className="form-submit"
                 >
                   <Send className="btn-icon" />
                   {isSending ? "Enviando..." : "Enviar Mensagem"}
