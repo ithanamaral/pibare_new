@@ -23,6 +23,7 @@
     align-items: center;
     max-width: 800px; /* Limita a largura máxima para não estourar em telas grandes */
     width: 100%;
+    margin-bottom: 50px;
 }
 
 /* A imagem fica responsiva e não quebra a proporção */
@@ -33,7 +34,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
 /* Efeito visual para indicar que é clicável */
@@ -56,7 +56,7 @@
   gap: 0.5rem;
   padding: 0.75rem 2rem;
   font-size: 1.125rem;
-  width: 50%;
+  width: 50vdw;
   color: var(--color-white);
   background-color: var(--color-blue-600);
   border-radius: 9999px;
@@ -68,6 +68,29 @@
 }
 
 
+
 .download-link:hover {
     transform: scale(1.06);
+}
+
+
+.event-info {
+    text-align: center;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+ul{
+    display: inline-block;
+}
+
+.event-info-description{
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.event-info-details{
+    text-align: left;
 }
