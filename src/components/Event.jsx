@@ -12,7 +12,7 @@ function Event() {
           <img src={imagem} alt="Imagem do evento" className="event-image" />
       </div>
       <div className="event-info">
-        <h2 className="event-info-title">Imersão na Provisão - 2026</h2>
+        <h2 className="event-info-title">Imersão na Provisão - 2026</h2>.
         <p className="event-info-description">
           Junte-se a nós para uma experiência transformadora de fé e comunhão!
         </p>
