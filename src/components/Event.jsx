@@ -1,6 +1,6 @@
 import React from 'react';
 import '../components/Event.css';
-import imagem from '../assets/imersao.jpeg'; 
+import imagem from '../assets/Foto12.jpeg'; 
 import { ArrowDownToLine } from "lucide-react";
 
 function Event() {

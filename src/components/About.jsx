@@ -1,5 +1,5 @@
 import { Heart, Users, BookOpen, HandHeart } from "lucide-react";
-import welcomingInterior from "../assets/Foto26.jpeg";
+import welcomingInterior from "../assets/Foto3.jpeg";
 import "./About.css";
 
 const About = () => {

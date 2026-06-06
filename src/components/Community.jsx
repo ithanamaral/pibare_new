@@ -1,5 +1,5 @@
 import { Star, Quote } from "lucide-react";
-import communitySmiling from "../assets/Foto22.jpeg";
+import communitySmiling from "../assets/Foto2.jpeg";
 import "./Community.css";
 
 const Community = () => {
