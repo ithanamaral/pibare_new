@@ -5,92 +5,28 @@ function Devotionals() {
   return (
     <>
       <main className="devotionals">
-        <h1>Cinco propósitos do sofrimento (Romanos 8 .28)</h1>
+        <h1>Sou indigno</h1>
         <p className="reflexao">
-          "Sabemos que todas as coisas cooperam para o bem daqueles que amam a
-          Deus, daqueles que são chamados segundo o seu propósito.
+          “Eis que sou indigno; que te responderia eu? Ponho a minha mão sobre a minha boca.” (Jó 40.4)
         </p>
         <section className="text">
           <p className="texto">
-            Raramente nós conhecemos as micro razões de nossos sofrimentos, mas
-            a Bíblia nos dá macro razões que sustentam a fé.
+            Pecador perdido, tenho uma palavra de encorajamento para você! Pensa que não pode vir a Deus porque é indigno. Não existe nenhum santo vivendo na terra que não tenha sentido a sua indignidade. Se Jó, Isaías e Paulo foram constrangidos a dizer: “Sou indigno”, quem se envergonhará de se unir nesta mesma confissão? Se a graça divina não erradicou do crente todo o pecado, como você espera fazer isso por si mesmo? Se Deus ama o seu próprio povo, embora este seja indigno, você acha que sua indignidade O impedirá de amá-lo?
           </p>
 
           <p className="texto">
-            É bom termos uma maneira de nos lembrar de algumas delas para que,
-            quando de repente formos afligidos ou tenhamos a chance de auxiliar
-            outros em sua aflição, possamos lembrar de algumas das verdades que
-            Deus nos deu para nos ajudar a não perdermos a esperança.
+            Creia em Jesus, você, banido da sociedade do mundo! Ele o chama assim como você está. Agora mesmo, diga: “Senhor Jesus, Tu morreste em favor de pecadores. Eu sou um pecador. Asperge sobre mim o teu sangue”. Se você confessar o seu pecado, achará perdão. Se você disser, de todo o coração: “Eu sou indigno, purifica-me”, você será purificado agora mesmo. Se o Espírito Santo lhe capacitar a clamar do fundo de seu coração:
+          </p>
+
+          <p className="texto" style={{ textAlign: "center", fontStyle: "italic", margin: "25px 0", lineHeight: "2.0" }}>
+            Assim como sou, sem uma justificativa<br />
+            Exceto a de ter sido teu sangue derramado por mim,<br />
+            E a de teres me chamado a Ti,<br />
+            Ó Cordeiro de Deus, eu vou!
           </p>
 
           <p className="texto">
-            Aqui está uma maneira de lembrar: cinco palavras (ou se ajudar,
-            escolha três e tente embra-las).
-          </p>
-          <p className="texto">
-            Os macro propósitos de Deus em nossos sofrimentos incluem:
-          </p>
-
-          <p className="texto">
-            Arrependimento: O sofrimento é um chamado para que nós e outros
-            deixemos de valorizar qualquer coisa na terra acima de Deus. Lucas
-            13.4-5:
-          </p>
-          <p className="texto">
-            “Ou cuidais que aqueles dezoito sobre os quais desabou a torre de
-            Siloé e os matou eram mais culpados que todos os outros habitantes
-            de Jerusalém? Não eram, eu vo-lo afirmo; mas, se não vos
-            arrependerdes, todos igualmente perecereis.”
-          </p>
-          <p className="texto">
-            Confiança: O sofrimento é um chamado para confiar em Deus e não nos
-            suportes que sustentam a vida do mundo. 2Coríntios 1.8-9:
-          </p>
-          <p className="texto">
-            “Porque não queremos, irmãos, que ignoreis a natureza da tribulação
-            que nos sobreveio na Ásia, porquanto foi acima das nossas forças, a
-            ponto de desesperarmos até da própria vida. Contudo, já em nós
-            mesmos, tivemos a sentença de morte, para que não confiemos em nós,
-            e sim no Deus que ressuscita os mortos.”
-          </p>
-          <p className="texto">
-            Justiça: O sofrimento é a disciplina do nosso amoroso Pai celestial,
-            para que possamos compartilhar sua santidade. Hebreus 12.6, 10-11:
-          </p>
-          <p className="texto">
-            “Porque o Senhor corrige a quem ama e açoita a todo filho a quem
-            recebe… Deus, porém, nos disciplina para aproveitamento, a fim de
-            sermos participantes da sua santidade. Toda disciplina, com efeito,
-            no momento não parece ser motivo de alegria, mas de tristeza; ao
-            depois, entretanto, produz fruto pacífico aos que têm sido por ela
-            exercitados, fruto de justiça.”
-          </p>
-          <p className="texto">
-            Galardão: O sofrimento está operando para nós um grande galardão no
-            céu que compensará mil vezes cada perda aqui. 2Coríntios 4.17:
-          </p>
-          <p className="texto">
-            “Porque a nossa leve e momentânea tribulação produz para nós eterno
-            peso de glória, acima de toda comparação.”
-          </p>
-          <p className="texto">
-            Lembrança: O sofrimento nos lembra que Deus enviou seu Filho ao
-            mundo para sofrer, para que o nosso sofrimento não fosse uma
-            condenação divina, mas a sua purificação. Filipenses 3.10:
-          </p>
-          <p className="texto">
-            “…para o conhecer, e o poder da sua ressurreição, e a comunhão dos
-            seus sofrimentos.”
-          </p>
-          <p>
-            Fonte:{" "}
-            <a
-              href="https://voltemosaoevangelho.com/blog/devocionais/31-de-janeiro-cinco-propositos-do-sofrimento/?utm_source=newsletter&utm_medium=email&utm_term=Sun+01+Feb+2026&utm_campaign=31+de+Janeiro+Cinco+prop%C3%B3sitos+do+sofrimento+Devocional+Alegria+Inabal%C3%A1vel"
-              target="_blank"
-              className="fonte-url"
-            >
-              https://voltemosaoevangelho.com/blog/devocionais/31-de-janeiro-cinco-propositos-do-sofrimento/
-            </a>
+            Você pode levantar-se, após a leitura de sua porção matutina, com todos os seus pecados perdoados. Embora você tenha acordado, nesta manhã, culpado de todos os pecados atribuídos aos homens, você dormirá hoje à noite aceito no Amado. Havendo sido degradado com as vestes do pecado, será vestido com uma túnica de justiça e parecerá tão puro como os anjos. “Eis, agora, o dia da salvação” (2 Coríntios 6.2). Se você crê nAquele que justifica o ímpio, você será salvo. Que o Espírito Santo lhe dê a fé salvadora nAquele que recebe até o mais indigno.
           </p>
         </section>
       </main>
